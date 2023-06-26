@@ -8,7 +8,7 @@ const PORT = 8888;
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = process.env.REDIRECT_URI;
+const REDIRECT_URI = (process.env.NODE_ENV === "production") ? process.env.REDIRECT_URI_PROD : process.env.REDIRECT_URI;
 const SPOTIFY_AUTHZ = process.env.SPOTIFY_AUTHZ;
 const SPOTIFY_TOKEN = process.env.SPOTIFY_TOKEN;
 const SPOTIFY_REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
